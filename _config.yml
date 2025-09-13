@@ -113,11 +113,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "bioyongsa"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "bioyongsa의 ***sample 블로그***예요!
+  location         : "South Korea"
+  email            : "bioyongsa@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
