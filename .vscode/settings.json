@@ -1,4 +1,8 @@
 {
-  "nvim.executablePath": "/usr/bin/nvim",
-  "nvim.useWsl": false
+  "nvim.executablePath": "/opt/cursor/bin/nvim",
+  "nvim.useWsl": false,
+  "vscode-neovim.neovimExecutablePath": "/opt/cursor/bin/nvim",
+  "vscode-neovim.executablePath": "/opt/cursor/bin/nvim",
+  "neovim.path": "/opt/cursor/bin/nvim",
+  "neovim.executablePath": "/opt/cursor/bin/nvim"
 }
