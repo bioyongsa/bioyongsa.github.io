@@ -1,0 +1,4 @@
+{
+  "nvim.executablePath": "/usr/bin/nvim",
+  "nvim.useWsl": false
+}
