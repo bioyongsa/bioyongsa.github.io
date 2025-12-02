@@ -1,8 +1,11 @@
 {
-  "nvim.executablePath": "/opt/cursor/bin/nvim",
+  "nvim.executablePath": "/usr/bin/nvim",
+  "nvim.path": "/usr/bin/nvim",
   "nvim.useWsl": false,
-  "vscode-neovim.neovimExecutablePath": "/opt/cursor/bin/nvim",
-  "vscode-neovim.executablePath": "/opt/cursor/bin/nvim",
-  "neovim.path": "/opt/cursor/bin/nvim",
-  "neovim.executablePath": "/opt/cursor/bin/nvim"
+  "vscode-neovim.neovimExecutablePath": "/usr/bin/nvim",
+  "vscode-neovim.executablePath": "/usr/bin/nvim",
+  "vscode-neovim.neovimPath": "/usr/bin/nvim",
+  "neovim.path": "/usr/bin/nvim",
+  "neovim.executablePath": "/usr/bin/nvim",
+  "neovim.nvimPath": "/usr/bin/nvim"
 }
