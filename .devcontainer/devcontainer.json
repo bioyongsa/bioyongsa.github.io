@@ -1,18 +1,24 @@
 {
   "name": "Jekyll Blog",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "context": "."
   },
   
   "forwardPorts": [4000],
   
   "remoteUser": "root",
   
-  "mounts": [
-    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
-  ],
-  
   "containerEnv": {
-    "DEBIAN_FRONTEND": "noninteractive"
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8"
+  },
+  
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "",
+  "postCreateCommand": "",
+  
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
   }
 }

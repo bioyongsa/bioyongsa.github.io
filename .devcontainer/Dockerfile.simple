@@ -1,0 +1,6 @@
+FROM ruby:3.2-alpine
+
+# 최소한의 패키지만 설치
+RUN apk add --no-cache bash git
+
+WORKDIR /workspace
