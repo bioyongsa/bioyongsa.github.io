@@ -1,0 +1,19 @@
+{
+  "name": "Jekyll Blog",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  
+  "forwardPorts": [4000],
+  
+  "remoteUser": "root",
+  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
