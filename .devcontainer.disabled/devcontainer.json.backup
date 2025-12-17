@@ -1,0 +1,18 @@
+{
+  "name": "Jekyll Blog",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  
+  "forwardPorts": [4000],
+  
+  "remoteUser": "root",
+  
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  
+  "containerEnv": {
+    "DEBIAN_FRONTEND": "noninteractive"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Jekyll",
+  "image": "ruby:3.2-alpine",
+  "forwardPorts": [4000]
+}
