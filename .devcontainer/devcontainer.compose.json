@@ -1,0 +1,15 @@
+{
+  "name": "RHEL 8.10 with Docker Compose",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "rhel-dev",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root",
+  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
