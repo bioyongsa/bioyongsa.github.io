@@ -1,0 +1,60 @@
+{
+  "name": "RHEL 8.10 Dev Container",
+  
+  // 기존 실행 중인 컨테이너 사용
+  "image": "nwharbor.sec.samsung.net/build/access_rhel8.10:latest",
+  
+  // 타임아웃 관련 설정 - postCreateCommand를 간단하게 유지
+  // 복잡한 설치는 컨테이너 연결 후 수동으로 수행
+  "postCreateCommand": "echo 'Container ready'",
+  
+  // 초기화 타임아웃 증가 (초 단위)
+  "initializeCommand": "echo 'Preparing to connect...'",
+  "updateRemoteUserUID": false,
+  
+  // 작업 디렉토리 설정
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  
+  // 컨테이너가 계속 실행되도록 설정
+  "overrideCommand": false,
+  
+  // 사용자 설정
+  "remoteUser": "sangku",
+  
+  // sangku 사용자 생성 명령
+  "postCreateCommand": "if ! id sangku >/dev/null 2>&1; then useradd -m -u 1000 sangku 2>/dev/null || true; fi && mkdir -p /etc/sudoers.d",
+  
+  // 권한 설정
+  "containerEnv": {
+    "HOME": "/root"
+  },
+  
+  // 호스트와 컨테이너 간 마운트 최적화
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  
+  // Cursor/VSCode 설정
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.eol": "\n"
+      }
+    }
+  },
+  
+  // 기본 포트 포워딩 설정 (필요시 추가)
+  "forwardPorts": [],
+  
+  // 보안 및 권한 설정
+  "runArgs": [
+    "--cap-add=SYS_PTRACE",
+    "--security-opt",
+    "seccomp=unconfined"
+  ],
+  
+  // 초기화 명령을 제거하여 연결 속도 향상
+  "postStartCommand": ""
+}

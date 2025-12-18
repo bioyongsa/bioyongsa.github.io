@@ -1,0 +1,6 @@
+{
+  "name": "RHEL 8.10 - Simple",
+  "image": "access_rhel8.10:latest",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root"
+}

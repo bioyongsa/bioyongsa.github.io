@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  rhel-dev:
+    image: access_rhel8.10:latest
+    container_name: rhel8-dev-container
+    
+    # 컨테이너를 계속 실행 상태로 유지
+    command: tail -f /dev/null
+    
+    # 작업 디렉토리 마운트
+    volumes:
+      - ..:/workspace:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+    
+    working_dir: /workspace
+    
+    # 네트워크 설정
+    network_mode: bridge
+    
+    # 보안 및 권한 설정
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    
+    # 환경 변수
+    environment:
+      - HOME=/root
+    
+    # 사용자 설정
+    user: root
+    
+    # 자동 재시작
+    restart: unless-stopped
