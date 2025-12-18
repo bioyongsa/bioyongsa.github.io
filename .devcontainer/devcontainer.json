@@ -19,8 +19,11 @@
   // 컨테이너가 계속 실행되도록 설정
   "overrideCommand": false,
   
-  // 사용자 설정 (RHEL은 기본적으로 root)
-  "remoteUser": "root",
+  // 사용자 설정
+  "remoteUser": "sangku",
+  
+  // sangku 사용자 생성 명령
+  "postCreateCommand": "if ! id sangku >/dev/null 2>&1; then useradd -m -u 1000 sangku 2>/dev/null || true; fi && mkdir -p /etc/sudoers.d",
   
   // 권한 설정
   "containerEnv": {
